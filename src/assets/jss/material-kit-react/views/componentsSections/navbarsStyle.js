@@ -1,5 +1,6 @@
 import { container, title } from "assets/jss/material-kit-react.js";
 import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.js";
+import { red } from "@material-ui/core/colors";
 
 const navbarsStyle = theme => ({
   section: {
@@ -22,6 +23,16 @@ const navbarsStyle = theme => ({
       borderRadius: "0"
     }
   },
+  // link: {
+  //   "&:hover": {
+  //     background: "#d4d2d2 !important",
+  //     color: "#000 !important"
+  //   }
+  // },
+  // active: {
+  //   background: "#7b7a78",
+  //   color: "#fff !important"
+  // },
   navigation: {
     backgroundPosition: "center center",
     backgroundSize: "cover",

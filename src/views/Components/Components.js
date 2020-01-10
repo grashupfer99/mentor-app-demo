@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 // core components
-import Header from "components/Header/Header.js";
+// import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -29,6 +29,7 @@ import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
 
 import styles from "assets/jss/material-kit-react/views/components.js";
+import Header from "../Components/Header";
 
 const useStyles = makeStyles(styles);
 
@@ -37,7 +38,8 @@ export default function Components(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Header
+      <Header {...props} />
+      {/* <Header
         brand="Material Kit React"
         rightLinks={<HeaderLinks />}
         fixed
@@ -47,7 +49,7 @@ export default function Components(props) {
           color: "white"
         }}
         {...rest}
-      />
+      /> */}
       <Parallax image={require("assets/img/bg4.jpg")}>
         <div className={classes.container}>
           <GridContainer>

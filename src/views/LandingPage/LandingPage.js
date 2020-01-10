@@ -3,11 +3,7 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
-
-import { Link, useLocation } from "react-router-dom";
 
 // core components
 // import Header from "components/Header/Header.js";
@@ -19,90 +15,22 @@ import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
-import navbarStyles from "assets/jss/material-kit-react/views/componentsSections/navbarsStyle.js";
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
+import MembershipSection from "./Sections/MembershipSection.js";
 import Header from "../Components/Header";
-// const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
-// const useNavbarStyles = makeStyles(navbarStyles);
 
 export default function LandingPage(props) {
   const classes = useStyles();
-  // const location = useLocation();
-  // const navbarClasses = useNavbarStyles();
-  // const { ...rest } = props;
 
-  // console.log("location ", location);
   return (
     <div>
       <Header {...props} />
-      {/* <Header
-        brand="Mentor App"
-  
-        rightLinks={
-          <List className={navbarClasses.list}>
-            <ListItem className={navbarClasses.listItem}>
-              <Button
-                component={Link}
-                to="/components"
-                className={
-                  navbarClasses.navLink +
-                  " " +
-                  navbarClasses.link +
-                  " " +
-                  navbarClasses.active
-                }
-           
-                color="transparent"
-              >
-                Discover
-              </Button>
-            </ListItem>
-            <ListItem className={navbarClasses.listItem}>
-              <Button
-                href="#pablo"
-                className={navbarClasses.navLink}
-                onClick={e => e.preventDefault()}
-                color="transparent"
-              >
-                Profile
-              </Button>
-            </ListItem>
-            <ListItem className={navbarClasses.listItem}>
-              <Button
-                href="#pablo"
-                className={navbarClasses.navLink}
-                onClick={e => e.preventDefault()}
-                color="transparent"
-              >
-                Settings
-              </Button>
-            </ListItem>
-          </List>
-        }
-        fixed
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
-        {...rest}
-      /> */}
-      {/* <Header
-        color="transparent"
-        routes={dashboardRoutes}
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
-        fixed
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
-        {...rest}
-      /> */}
+
       <Parallax filter image={require("assets/img/landing-bg-main.jpg")}>
         <div className={classes.container}>
           <GridContainer>
@@ -133,6 +61,7 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <ProductSection />
           <TeamSection />
+          <MembershipSection />
           <WorkSection />
         </div>
       </div>

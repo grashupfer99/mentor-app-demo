@@ -13,12 +13,15 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 // import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
+import { useHistory } from "react-router-dom";
 
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
+import FaQSection from "./Sections/FaQSection.js";
 import WorkSection from "./Sections/WorkSection.js";
+import AdvantagesSection from "./Sections/AdvantagesSection.js";
 import MembershipSection from "./Sections/MembershipSection.js";
 import Header from "../Components/Header";
 
@@ -26,6 +29,7 @@ const useStyles = makeStyles(styles);
 
 export default function LandingPage(props) {
   const classes = useStyles();
+  const history = useHistory();
 
   return (
     <div>
@@ -46,12 +50,9 @@ export default function LandingPage(props) {
               <Button
                 color="primary"
                 size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={() => history.push("/mentors")}
               >
-                <i className="fas fa-play" />
-                Watch video
+                View All Mentors
               </Button>
             </GridItem>
           </GridContainer>
@@ -61,7 +62,9 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <ProductSection />
           <TeamSection />
+          <FaQSection />
           <MembershipSection />
+          <AdvantagesSection />
           <WorkSection />
         </div>
       </div>

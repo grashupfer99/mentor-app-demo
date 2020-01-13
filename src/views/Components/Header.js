@@ -34,7 +34,7 @@ const CustomLink = ({ classes, location, path, name }) => {
 
 const routes = [
   { path: "/", name: "Home" },
-  { path: "/components", name: "Components" },
+  // { path: "/components", name: "Components" },
   { path: "/mentors", name: "Mentors" },
   { path: "/login-page", name: "Login" }
 ];

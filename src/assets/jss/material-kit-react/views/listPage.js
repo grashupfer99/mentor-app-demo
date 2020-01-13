@@ -56,8 +56,11 @@ const profilePageStyle = {
     margin: "20px auto 50px auto",
     textAlign: "center"
   },
-  chips: {
-    marginRight: "5px"
+  searchContainer: {
+    padding: "50px 0 25px",
+    "& .MuiTextField-root": {
+      width: 350
+    }
   }
 };
 

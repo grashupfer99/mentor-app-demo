@@ -20,7 +20,7 @@ ReactDOM.render(
       <Route path="/landing-page" component={LandingPage} />
       <Route path="/components" component={Components} />
       <Route path="/mentors" component={ListPage} />
-      <Route path="/profile-page" component={ProfilePage} />
+      <Route path="/profile-page/:mentorId" component={ProfilePage} />
       <Route path="/login-page" component={LoginPage} />
       <Route exact path="/" component={LandingPage} />
     </Switch>

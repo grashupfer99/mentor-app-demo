@@ -4,17 +4,25 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
-import profile from "assets/img/faces/christian.jpg";
-
+import PropTypes from "prop-types";
 import styles from "assets/jss/material-kit-react/views/componentsSections/mentorStyle";
-
+import { useHistory } from "react-router-dom";
 import Chip from "@material-ui/core/Chip";
 import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(styles);
 
-export default function Mentor({ name, imgSrc, role, service, about, price }) {
+export default function Mentor({
+  id,
+  name,
+  imgSrc,
+  role,
+  service,
+  about,
+  price
+}) {
   const classes = useStyles();
+  const history = useHistory();
 
   return (
     <div className={classes.root}>
@@ -22,7 +30,7 @@ export default function Mentor({ name, imgSrc, role, service, about, price }) {
         <Grid container spacing={2}>
           <Grid item>
             <ButtonBase className={classes.image}>
-              <img className={classes.img} alt="complex" src={profile} />
+              <img src={imgSrc} className={classes.img} alt="complex" />
             </ButtonBase>
           </Grid>
           <Grid item xs={12} sm container>
@@ -56,12 +64,20 @@ export default function Mentor({ name, imgSrc, role, service, about, price }) {
               <Chip label="Korea" variant="outlined" />{" "}
               <Chip label="7 Day Trial" variant="outlined" /> <br />
               <br />
-              <Button variant="contained" color="primary">
-                Apply
-              </Button>{" "}
-              <Button variant="outlined" color="primary">
-                View Profile
-              </Button>
+              <div className={classes.buttonGroup}>
+                <Button variant="contained" color="primary">
+                  Apply
+                </Button>{" "}
+              </div>
+              <div className={classes.buttonGroup}>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  onClick={() => history.push(`/profile-page/${id}`)}
+                >
+                  View Profile
+                </Button>
+              </div>
             </Grid>
           </Grid>
         </Grid>
@@ -69,3 +85,13 @@ export default function Mentor({ name, imgSrc, role, service, about, price }) {
     </div>
   );
 }
+
+Mentor.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  imgSrc: PropTypes.string,
+  role: PropTypes.string,
+  service: PropTypes.array,
+  about: PropTypes.string,
+  price: PropTypes.string
+};

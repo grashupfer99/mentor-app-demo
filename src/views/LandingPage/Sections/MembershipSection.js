@@ -1,6 +1,6 @@
 import React from "react";
 // nodejs library that concatenates classes
-import classNames from "classnames";
+// import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -9,13 +9,13 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import Typography from "@material-ui/core/Typography";
 import StarIcon from "@material-ui/icons/StarBorder";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
+// import GridContainer from "components/Grid/GridContainer.js";
+// import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardFooter from "components/Card/CardFooter.js";
-import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
+// import CardBody from "components/Card/CardBody.js";
+// import CardFooter from "components/Card/CardFooter.js";
+// import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/membershipStyle.js";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
@@ -67,11 +67,11 @@ const useStyles = makeStyles(styles);
 
 export default function TeamSection() {
   const classes = useStyles();
-  const imageClasses = classNames(
-    classes.imgRaised,
-    classes.imgRoundedCircle,
-    classes.imgFluid
-  );
+  // const imageClasses = classNames(
+  //   classes.imgRaised,
+  //   classes.imgRoundedCircle,
+  //   classes.imgFluid
+  // );
   return (
     <div className={classes.section}>
       <h2 className={classes.title}>Membership Plans</h2>

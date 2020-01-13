@@ -14,7 +14,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
-import HeaderLinks from "components/Header/HeaderLinks.js";
+// import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionBasics from "./Sections/SectionBasics.js";
 import SectionNavbars from "./Sections/SectionNavbars.js";
 import SectionTabs from "./Sections/SectionTabs.js";
@@ -35,7 +35,7 @@ const useStyles = makeStyles(styles);
 
 export default function Components(props) {
   const classes = useStyles();
-  const { ...rest } = props;
+  // const { ...rest } = props;
   return (
     <div>
       <Header {...props} />

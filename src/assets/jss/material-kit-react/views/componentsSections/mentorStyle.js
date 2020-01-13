@@ -17,6 +17,12 @@ const mentorStyle = {
     maxWidth: "100%",
     maxHeight: "100%",
     borderRadius: "50%"
+  },
+  buttonGroup: {
+    marginTop: "10px",
+    "& > button": {
+      width: "100%"
+    }
   }
 };
 
